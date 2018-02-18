@@ -13,6 +13,7 @@ echo Un ete a Paris > CeFichierAUnNomTresLong
 cat #CeF+{Tab}
 
 #6 
+head -c 6 CeFichierAUnNomTresLong
 cut -b 1-6 CeFichierAUnNomTresLong
 # Les characteres a accent utilisent 2 ocets.
 
