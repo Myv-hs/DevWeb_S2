@@ -7,58 +7,61 @@ tar -zxvf archive.tar.gz -C rep/
 
 
 Question 03 : 
-
-
+ls -R rep/
+Il y a 5 repertoires dans rep/ (inclus):
+rep/ rep/dir1 rep/dir2 rep/dir2/rep rep/img
 
 Question 04 : 
-
+rm -r rep/dir1/
 
 
 Question 05 : 
-
+find -name hello -exec stat {} \;
 
 
 Question 06 : 
-
+find -name hello -exec chmod g-x,o-x {} \;
 
 
 Question 07 : 
-
-
+wc -l rep/appel
+Il y a vingts lignes.
 
 Question 08 : 
-
-
+grep 'France' rep/appel
+le mot 'France' apparais 3 fois (la chaine 'france' apparais une fois de plus dans souffrance
+grep -i 'France' rep/appel
+).
 
 Question 09 : 
-
+find \( -name *.jp*g -a -size -450k \) -print
 
 
 Question 10 : 
-
+grep '[a-zA-Z][a-zA-Z]\s*[0-9]\{1,3\}\s*[a-zA-Z][a-zA-Z]' rep/immatriculations_vehicules
 
 
 Question 11 : 
-
+paste <(cut -d $'\t' -f2 rep/dir2/data) <(cut -d $'\t' -f1,3 rep/dir2/data) > rep/dir2/villes
 
 
 Question 12 : 
-
+paste <(cat rep/dir2/data2 | tr -s $'\t' | cut -d $'\t' -f2) <(cat rep/dir2/data2 |tr -s $'\t'| cut -d $'\t' -f1,3) > rep/dir2/villes2
 
 
 Question 13 : 
-
+diff rep/dir2/data rep/dir2/data2
+La difference apparait sur la premiere ligne a la septimere caractere pour les deux fichiers. Dans data c'est le 'L' de "Lima" dans data2 c'est la second tabulation.
 
 
 Question 14 : 
-
+sort rep/dir2/data -t $'\t' -k
 
 
 Question 15 : 
-
+sort rep/dir2/data -nt $'\t' -k3 | cut -d $'\n' -f1-3 > resultat
 
 
 Question 16 : 
-
-
+alias bonjour='clear; echo Bonjour $USER, ce terminal est ouvert depuis $SECONDS secondes.'
 
