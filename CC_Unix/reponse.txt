@@ -55,7 +55,7 @@ La difference apparait sur la premiere ligne a la septimere caractere pour les d
 
 
 Question 14 : 
-sort rep/dir2/data -t $'\t' -k
+sort rep/dir2/data -t $'\t' -k2
 
 
 Question 15 : 
