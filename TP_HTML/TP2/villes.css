@@ -1,0 +1,16 @@
+table {
+	border: 4px solid blue;
+	border-collapse: collapse;
+}
+
+th, td{
+	border:1px solid black;
+}
+
+.cunt_name {
+	font-variant: small-caps;
+}
+
+.red_bg {
+	background-color: red;
+}

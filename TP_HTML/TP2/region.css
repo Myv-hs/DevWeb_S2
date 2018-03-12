@@ -1,0 +1,14 @@
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th {
+	color: #000066;
+	font-weight: bold;
+}
+
+.departement {
+	color: lightgrey;
+	text-transform: uppercase;
+}

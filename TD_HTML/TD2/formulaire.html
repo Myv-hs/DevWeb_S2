@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>formulaire</title>
+		<meta charset="utf-8" />
+
+		<style type="text/css">
+			h1 {
+				color: green;
+			}
+			li {
+				font-style: italic;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Un formulaire</h1>
+		<form name="formulaire" method="post" action="#">
+			<fieldset>
+				<legend>
+					Informations g&eacute;n&eacute;rales
+				</legend>
+				<ul>
+					<li>
+						Vous vous appelez: <input type="text" name="nom" size="100"/>
+					</li>
+					<li>
+						Vous etes: <br />
+						<input type="radio" name="genre" value="H" /> Un homme <br />
+						<input type="radio" name="genre" value="F" checked="checked"/> Une femme
+					</li>
+					<li>
+						Vous etes n&eacute;(e) le:
+						<select name="jour">
+							<option value="1">1</option>
+							<option value="15">15</option>
+							<option value="30">30</option>
+						</select>
+						<select name="mois">
+							<option value="1">janvier</option>
+							<option value="12">decembre</option>
+						</select>
+						<input type="number" min="1900" max="2018" value="2000"/>
+					</li>
+				</ul>
+			</fieldset>
+
+			<div title="Vos centres d'interet" style="width:300px; overflow:auto;border: 1px solid black; position:fixed;top:35px;right:20px;background: yellow;">
+				<fieldset>
+					<legend>Vos centres d'int&eacute;ret</legend>
+					<input type="checkbox" value="lecture"/> Lecture <br />
+					<input type="checkbox" value="musique"/> Musique <br />
+					<input type="checkbox" value="sport"/> Sport
+				</fieldset>
+			</div>
+
+			<input type="submit" value="Envoyer" />
+			<input type="reset" value="Annuler" />
+		</form>
+	</body>
+</html>
