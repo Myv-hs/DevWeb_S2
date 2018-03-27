@@ -1,0 +1,14 @@
+.grid {
+	width:50%;
+	margin-left: 25%;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-auto-rows: auto;
+}
+.grid > div {
+	background: yellow;
+}
+
+.grid > div:nth-child(odd){
+	background: green;
+}

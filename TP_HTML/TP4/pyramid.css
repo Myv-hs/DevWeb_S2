@@ -1,0 +1,24 @@
+.grid {
+	display:grid;
+	grid-template-columns: repeat(5,1fr);
+}
+
+.grid > p {
+	margin:0;
+	padding:0;
+	height:100px;
+}
+
+.yel {
+	background: yellow;
+}
+
+.red {
+	background: red;
+	padding-top: 50%;
+}
+
+.gre {
+	background: green;
+	padding-top: 80%
+}
