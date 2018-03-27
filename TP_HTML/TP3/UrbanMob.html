@@ -3,15 +3,128 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Questionnaire de mobilité urbaine</title>
+		<style type="text/css">
+			ul {
+				list-style: none;
+			}
+			textarea {
+				background: lightgrey;
+				resize: none;
+			}
+			input[type=submit]:hover , input[type=reset]:hover {
+				background: black;
+				color:white;
+			}
+
+			.checkboxes {
+				display: grid;
+				grid-template-columns: repeat(3,1fr);
+			}
+
+			input
+		</style>
 	</head>
 	<body>
-		<form name="formulaire" method="post" action="#">
+		<form name="formulaire" method="post" action="http://www.info.univ-angers.fr/~rossi/reponse.php">
 			<fieldset>
 				<legend>Informations Personels</legend>
+				<ul>
+					<li>
+						Genre : M <input name="genre" type="radio" value="1"> F <input name="genre" type="radio" value="2" checked="checked">
+					</li>
+					<li>
+						Classe d'age : <select name="age">
+							<option value="m20">Moins de 20 ans</option>
+							<option value="2039">20 a 39 ans</option>
+							<option value="4059">40 a 59 ans</option>
+							<option value="p60">60 ans ou plus</option>
+						</select>
+					</li>
+					<li>
+						Group socioproffesionnel : <select name="gsp">
+							<option value="agri">Agriculteurs exploitants</option>
+							<option value="arti">Artisans, commerçants et chefs d’entreprise</option>
+							<option value="cadr">Cadres et professions intellectuelles supérieures</option>
+							<option value="proi">Professions intermédiaires</option>
+							<option value="empl">Employés</option>
+							<option value="ouvr">Ouvriers</option>
+							<option value="retr">Retraités</option>
+							<option value="sansac">Autres personnes sans activité professionnelles</option>
+						</select>
+					</li>
+					<li>
+						Code postale : <input name="cpostal" type="text" maxlength="5" value="49000">
+					</li>
+				</ul>
 			</fieldset>
-			<ul>
-				<li></li>
-			</ul>
+			<fieldset>
+				<legend>Information sur les trajets domicile - travail</legend>
+				<ul>
+					<li>
+						Véhicule principal pour les trajets domocile - travail : <select name="vehicule">
+							<option value="pieton">Aucun (piéton)</option>
+							<option value="velo">Bicyclette</option>
+							<option value="deuxroues">Deux roues motorisé</option>
+							<option value="auto">Automobile</option>
+							<option value="tcommun">Transports en commun (train, tram, bus, mé-
+tro)</option>
+						</select>
+					</li>
+					<li>
+						Distance domicil - travail : <select name="distance">
+							<option value="m1">Inférieure à 1 km</option>
+							<option value="15">De 1 à 5 km</option>
+							<option value="515">De 5 à 15 km</option>
+							<option value="p15">15 km ou plus</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Axes d'amelioration des transports en commun</legend>
+				<ul>
+					<li>
+						Cocher les principaux obstacles a la mobilite en transport en commun (plusieurs reponses possibles)
+						<ul class="checkboxes">
+							<li>
+								<input type="checkbox" value="tem">Temps de trajet trop longs
+							</li>
+							<li>
+								<input type="checkbox" value="cor">Correspondances inadaptees
+							</li>
+							<li>
+								<input type="checkbox" value="tar">Tarifs trop eleves
+							</li>
+							<li>
+								<input type="checkbox" value="res">Respect des horaires
+							</li>
+							<li>
+								<input type="checkbox" value="tro">Trop forte affluence
+							</li>
+							<li>
+								<input type="checkbox" value="des">Desserte insuffisante
+							</li>
+							<li>
+								<input type="checkbox" value="amp">Amplitude horaire trop limitee
+							</li>
+							<li>
+								<input type="checkbox" value="con">Confort insuffisant
+							</li>
+						</ul>
+					</li>
+					<li>
+						Remarques ou observations sur le reseau de transports en commun : <br />
+						<textarea name="remarques" cols="60" rows="4"></textarea>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>
+					Merci de votre participation !
+				</legend>
+				<input class="hover" type="submit" value="Soumettre">
+				<input class="hover" type="reset" value="Reinitialiser">
+			</fieldset>
 		</form>
 </body>
 </html>
