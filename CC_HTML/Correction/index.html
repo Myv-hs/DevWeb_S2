@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html dir='ltr' lang='FR-fr'>
+
+	<head>
+		<meta charset='utf-8' />
+		<title>Questionaire de satisfaction</title>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+	</head>
+	
+	<body>
+		<img src="http://moodle.univ-angers.fr/pluginfile.php/938665/mod_resource/content/1/avion.jpg" alt="photo manquant"/>
+		<form name="questionnaire" method="post" action="http://www.info.univ-angers.fr/~rossi/affichage.php">
+			<fieldset>
+				<legend>Sondage</legend>
+				Votre nom :<br />
+				<input type="text" name="nom" placeholder="Votre nom">
+				<br />
+				Vous avez voyagé en classe : <br />
+				<select name="classe">
+					<option value="eco">Economiaue</option>
+					<option value="aff">Affaire</option>
+					<option value="pre">Première</option>
+					
+				</select>
+				<br />
+				<table>
+					<tr>
+						<th colspan="2">Note</th>
+						<th>1</th>
+						<th>2</th>
+						<th>3</th>
+						<th>4</th>
+						<th>5</th>
+					</tr>
+					<tr>
+						<td rowspan="3">En Vol</td>
+						<td>Propreté de l'appareil</td>
+						<td><input type="radio" name="proprete" value="1"></td>
+						<td><input type="radio" name="proprete" value="2"></td>
+						<td><input type="radio" name="proprete" value="3" checked></td>
+						<td><input type="radio" name="proprete" value="4"></td>
+						<td><input type="radio" name="proprete" value="5"></td>
+					</tr>
+					<tr>
+						<td>Qualité de la nourriture</td>
+						<td><input type="radio" name="nourriture" value="1"></td>
+						<td><input type="radio" name="nourriture" value="2"></td>
+						<td><input type="radio" name="nourriture" value="3" checked></td>
+						<td><input type="radio" name="nourriture" value="4"></td>
+						<td><input type="radio" name="nourriture" value="5"></td>
+					</tr>
+					<tr>
+						<td>Confort de l'appareil</td>
+						<td><input type="radio" name="confort" value="1"></td>
+						<td><input type="radio" name="confort" value="2"></td>
+						<td><input type="radio" name="confort" value="3" checked></td>
+						<td><input type="radio" name="confort" value="4"></td>
+						<td><input type="radio" name="confort" value="5"></td>
+					</tr>
+					<tr>
+						<td rowspan="2">A terre</td>
+						<td>Politesse du personnel</td>
+						<td><input type="radio" name="politesse" value="1"></td>
+						<td><input type="radio" name="politesse" value="2"></td>
+						<td><input type="radio" name="politesse" value="3" checked></td>
+						<td><input type="radio" name="politesse" value="4"></td>
+						<td><input type="radio" name="politesse" value="5"></td>
+					</tr>
+					<tr>
+						<td>Temps d'attente</td>
+						<td><input type="radio" name="attente" value="1"></td>
+						<td><input type="radio" name="attente" value="2"></td>
+						<td><input type="radio" name="attente" value="3" checked></td>
+						<td><input type="radio" name="attente" value="4"></td>
+						<td><input type="radio" name="attente" value="5"></td>
+					</tr>
+				</table>
+			</fieldset>
+				<legend>Commentaires</legend>
+			<fieldset>
+				<textarea name="commentaires" rows="10" cols="50">
+				</textarea> 
+			</fieldset>
+			<fieldset>
+				<legend>Envoi</legend>
+				<input class="jaune" type="submit" value="Submit">
+		  		<input class="jaune" type="reset" value="Effacer">
+			</fieldset>
+		</form> 
+
+	</body>
+
+</html>

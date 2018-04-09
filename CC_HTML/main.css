@@ -1,0 +1,21 @@
+form {
+	width:60%;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;	
+}
+
+img {
+	position:fixed;
+	top:15px;
+	right:5px;
+	width:39%;
+}
+
+.jaune {
+	background:yellow;
+	width:100px;
+	height:34px;
+}

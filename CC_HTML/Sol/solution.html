@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr-FR">
+<head>
+<meta charset="utf-8" />
+<title>Questionnaire de satisfaction</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div id="formulaire">
+		<form name="questionnaire" method="post"
+			action="http://www.info.univ-angers.fr/~rossi/affichage.php">
+			<fieldset>
+				<legend> Sondage </legend>
+				<p>
+					<label for="nom">Votre nom :</label><br /> <input type="text"
+						name="nom" id="nom" size="20" maxlength="10"
+						placeholder="Votre nom" />
+				</p>
+				<p>
+					<label>Vous avez voyagé en classe :</label><br /> <select
+						name="classe">
+						<option value="eco">Economique</option>
+						<option value="aff">Affaire</option>
+						<option value="pre">Première</option>
+					</select>
+				</p>
+
+				<table>
+					<tr>
+						<th colspan="2">Note</th>
+						<th>1</th>
+						<th>2</th>
+						<th>3</th>
+						<th>4</th>
+						<th>5</th>
+					</tr>
+					<tr>
+						<td rowspan="3">En vol</td>
+						<td>Propreté de l'appareil</td>
+						<td><input type="radio" name="proprete" id="proprete1"
+							value="1" /></td>
+						<td><input type="radio" name="proprete" id="proprete2"
+							value="2" /></td>
+						<td><input type="radio" name="proprete" id="proprete3"
+							value="3" checked /></td>
+						<td><input type="radio" name="proprete" id="proprete4"
+							value="4" /></td>
+						<td><input type="radio" name="proprete" id="proprete5"
+							value="5" /></td>
+					</tr>
+					<tr>
+						<td>Qualité de la nourriture</td>
+						<td><input type="radio" name="nourriture" id="nourriture1"
+							value="1" /></td>
+						<td><input type="radio" name="nourriture" id="nourriture2"
+							value="2" /></td>
+						<td><input type="radio" name="nourriture" id="nourriture3"
+							value="3" checked /></td>
+						<td><input type="radio" name="nourriture" id="nourriture4"
+							value="4" /></td>
+						<td><input type="radio" name="nourriture" id="nourriture5"
+							value="5" /></td>
+					</tr>
+					<tr>
+						<td>Confort de l'appareil</td>
+						<td><input type="radio" name="confort" id="confort1"
+							value="1" /></td>
+						<td><input type="radio" name="confort" id="confort2"
+							value="2" /></td>
+						<td><input type="radio" name="confort" id="confort3"
+							value="3" checked /></td>
+						<td><input type="radio" name="confort" id="confort4"
+							value="4" /></td>
+						<td><input type="radio" name="confort" id="confort5"
+							value="5" /></td>
+					</tr>
+					<tr>
+						<td rowspan="2">A terre</td>
+						<td>Politesse du personnel</td>
+						<td><input type="radio" name="politesse" id="politesse1"
+							value="1" /></td>
+						<td><input type="radio" name="politesse" id="politesse2"
+							value="2" /></td>
+						<td><input type="radio" name="politesse" id="politesse3"
+							value="3" checked /></td>
+						<td><input type="radio" name="politesse" id="politesse4"
+							value="4" /></td>
+						<td><input type="radio" name="politesse" id="politesse5"
+							value="5" /></td>
+					</tr>
+					<tr>
+						<td>Temps d'attente</td>
+						<td><input type="radio" name="attente" id="attente1"
+							value="1" /></td>
+						<td><input type="radio" name="attente" id="attente2"
+							value="2" /></td>
+						<td><input type="radio" name="attente" id="attente3"
+							value="3" checked /></td>
+						<td><input type="radio" name="attente" id="attente4"
+							value="4" /></td>
+						<td><input type="radio" name="attente" id="attente5"
+							value="5" /></td>
+					</tr>
+				</table>
+
+			</fieldset>
+			<fieldset>
+				<legend> Commentaires</legend>
+				<p>
+					<textarea cols="60" rows="5" name="commentaires" id="avis"></textarea>
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend>Envoi</legend>
+				<p>
+					<input type="submit" value="Envoyer" /> &nbsp; <input type="reset"
+						value="Effacer" />
+				</p>
+			</fieldset>
+		</form>
+	</div>
+	<div id="image">
+		<img src="img/avion.jpg" alt="avion" />
+	</div>
+</body>
+</html>
