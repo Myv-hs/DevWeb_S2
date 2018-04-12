@@ -2,8 +2,16 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Nombre Myst&egrave;re</title>
+		<script type="text/javascript" src="NombreMystere.js"></script>
 	</head>
-	<body>
-		
+	<body onload="init_game()">	
+		<h1>Nombre Myst&egrave;re version paragraphe</h1>
+
+		Votre proposition : 
+		<input type="text" id="usrin"> 
+		<input type="submit" value="Soumettre" onclick="game()">
+		<input id="rst" type="reset" value="Reset" onclick="init_game()">
+		<ul id="out">
+		</ul>
 	</body>
 </html>
