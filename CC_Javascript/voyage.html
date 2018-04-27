@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Voyage</title>
+		<style>
+			body {
+				background:lightgrey;
+			}
+			form {
+				width:450px;
+				margin:auto;
+			}
+			fieldset {
+				background:white;
+			}
+			legend {
+				background:darkgrey;
+				margin-bottom:2px;
+			}
+			fieldset:hover {
+				background:lightblue;
+			}
+			input[type=submit], input[type=reset] {
+				width: 200px;
+			}
+			
+			input[type=submit]:hover, input[type=reset]:hover {
+				background: yellow;
+			}
+			.imgDiv {
+				float:left;
+			}
+			.imgDiv > div{
+				width:50%;
+			}
+			img {
+				width:200px;
+			}
+		</style>
+		
+		<script>
+			function validateForm() {
+				var n = document.forms["myForm"]["nom"].value;
+				var j = document.forms["myForm"]["jour"].value;
+				var m = document.forms["myForm"]["mois"].value;
+				var a = document.forms["myForm"]["annee"].value;
+				
+				var g = document.forms["myForm"]["genre"].value;
+				var d = document.forms["myForm"]["destination"].value;
+				
+				
+				if (n == "") {
+					alert("Il manque le nom");
+					return false;
+				}
+				if (g == "") {
+					alert("Il manque le genre");
+					return false;
+				}
+				if (isNaN(j) || isNaN(m)|| isNaN(a)) {
+					alert("la date n'est pas un nombre");
+					return false;
+				}
+				
+				if (d == "") {
+					alert("Il manque la destination");
+					return false;
+				}
+			} 
+			
+			function updatePrice (reduction){
+				var Bbase = 450;
+				var Fbase = 4500;
+				
+				var B = window.document.getElementById("prixB");
+				var F = window.document.getElementById("prixF");
+				
+				B.innerHTML = Bbase - (Bbase*reduction/100) + "€";
+				F.innerHTML = Fbase - (Fbase*reduction/100) + "€";
+			}
+			
+			function ageCheck (){
+				var year = window.document.getElementById("year").value;
+				var minor = window.document.getElementById("minor");
+				if(year>=2000){
+					minor.style.visibility='visible';
+					updatePrice(10);
+				} else {
+					minor.style.visibility='hidden';
+					updatePrice(0);
+				}
+			}
+		</script>
+		
+	</head>
+	<body>
+		<form name="myForm" method="POST" onsubmit="return validateForm()"  action="http://www.info.univ-angers.fr/~rossi/voyage.php">
+			<fieldset>
+				<legend>Indent&eacute;</legend>
+				Votre nom: <input type="text" name="nom"><br>
+				Madame<input type="radio" name="genre" value="madame"><br>
+				Monsieur<input type="radio" name="genre" value="monsieur"><br>
+				Votre date de naissance: <input type="text" name="jour" maxlength="2" size="1"> / <input type="text" name="mois" maxlength="2" size="1"> / <input id="year" onchange="ageCheck()" type="text" name="annee" maxlength="4" size="1"> <br>
+				<span id="minor" style="visibility:hidden;"><input type="checkbox" name="accompagnateur" value="madame"> Necessite un accompagnateur</span>
+			</fieldset>
+			<fieldset>
+				<legend>Destination</legend>
+				<div class="imgDiv">
+					<div>
+						<p id="prixB">450€</p>
+						<img src="bruges.jpg" title="Bruges"/> <br>
+						Bruges<input type="radio" name="destination" value="bruges">
+					</div>
+					<div>
+						<p id="prixF">4500€</p>
+						<img src="florence.jpg" title="Florence"/> <br>
+						Florence<input type="radio" name="destination" value="florence">
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Validation</legend>
+				<input type="submit" value="Envoyer"> <input type="reset" value="Annuler">
+			</fieldset>
+		</form>
+	</body>
+</html>
